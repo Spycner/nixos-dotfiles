@@ -2,8 +2,8 @@
   self,
   inputs,
   ...
-}: let 
-  extraSpecialArgs = { inherit inputs self; };
+}: let
+  extraSpecialArgs = {inherit inputs self;};
 
   homeImports = {
     # main pc
@@ -34,7 +34,7 @@
     config.allowUnfree = true;
   };
 in {
-  _module.args = { inherit homeImports; };
+  _module.args = {inherit homeImports;};
 
   flake = {
     homeConfigurations = {

@@ -8,10 +8,14 @@
     ./themespec.nix
     ./terminal
     ./base.nix
+    inputs.matugen.nixosModules.default
+    inputs.hyprlock.homeManagerModules.default
+    inputs.hypridle.homeManagerModules.default
+    self.nixosModules.theme
   ];
 
   nixpkgs.overlays = [
-    (final: prev: {
+    (_final: prev: {
       lib = prev.lib // {colors = import "${self}/lib/colors" lib;};
     })
   ];

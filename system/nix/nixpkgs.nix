@@ -6,7 +6,7 @@
     ];
 
     overlays = [
-      (final: prev: {
+      (_final: prev: {
         lib =
           prev.lib
           // {

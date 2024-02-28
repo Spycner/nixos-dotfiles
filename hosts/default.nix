@@ -10,7 +10,7 @@
     mod = "${self}/system";
 
     # get the basic config to build on top of
-    inherit (import "${self}/system") desktop laptop;
+    inherit (import "${self}/system") desktop;
 
     # get these into the module system
     specialArgs = {inherit inputs self;};
@@ -23,6 +23,8 @@
           ./athena
           "${mod}/core/lanzaboote.nix"
 
+          "${mod}/hardware/nvidia.nix"
+
           "${mod}/programs/gamemode.nix"
           "${mod}/programs/hyprland.nix"
           "${mod}/programs/steam.nix"
@@ -30,13 +32,12 @@
           "${mod}/network/spotify.nix"
           "${mod}/network/syncthing.nix"
 
-          "${mod}/services/kmonad"
           "${mod}/services/gnome-services.nix"
           "${mod}/services/location.nix"
 
           {
             home-manager = {
-              users.mihai.imports = homeImports."pkraus@athena";
+              users.pkraus.imports = homeImports."pkraus@athena";
               extraSpecialArgs = specialArgs;
             };
           }

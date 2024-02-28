@@ -1,9 +1,4 @@
-{
-  lib,
-  self,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.nix-index-db.hmModules.nix-index
     ./terminal/shell
@@ -16,11 +11,10 @@
     extraOutputsToInstall = ["doc" "devdoc"];
   };
 
-  manual =  {
+  manual = {
     html.enable = false;
     json.enable = false;
     manpages.enable = false;
   };
-
   programs.home-manager.enable = true;
 }

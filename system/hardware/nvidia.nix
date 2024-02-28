@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }: {
   services.xserver.videoDrivers = ["nvidia"];
@@ -16,14 +17,14 @@
       # driver - choose either stable, beta or production
       open = true; # open-source driver currently in alpha, not recommended
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-      
+
       # modesetting is required
       modesetting.enable = true;
-      
+
       powerManagement.enable = false;
       # Experimental: can turn gpu off if not in use
       powerManagement.finegrained = false;
-      
+
       # enable nvidia-settings menue
       nvidiaSettings = true;
     };

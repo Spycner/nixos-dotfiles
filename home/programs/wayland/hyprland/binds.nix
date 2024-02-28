@@ -70,7 +70,6 @@ in {
         "ALT, Print, exec, grimblast --notify --cursor copysave screen"
         "$mod SHIFT ALT, R, exec, grimblast --notify --cursor copysave screen"
 
-
         # cycle workspaces
         "$mod, ., workspace, m-1"
         "$mod, -, workspace, m+1"
