@@ -7,6 +7,5 @@
     libreoffice
     obsidian
     xournalpp
-    obsidian
   ];
 }

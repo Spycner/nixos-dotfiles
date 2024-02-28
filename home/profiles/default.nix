@@ -2,38 +2,55 @@
   self,
   inputs,
   ...
-}: let
-  # get these into the module system
-  extraSpecialArgs = {inherit inputs self;};
+}: let 
+  extraSpecialArgs = { inherit inputs self; };
 
   homeImports = {
+    # main pc
     "pkraus@athena" = [
       ../.
       ./athena
     ];
+
+    # laptop
     "pkraus@persephone" = [
       ../.
-      ./rog
+      ./persephone
+    ];
+
+    # usb stick
+    "pkraus@iris" = [
+      ../base.nix
+      ./iris
     ];
   };
 
-  inherit (inputs.hm.lib) homeManagerConfiguration;
+  inherit (inputs.home-manager.lib) homeManagerConfiguration;
 
-  pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+  system = "x86_64-linux";
+
+  pkgs = inputs.nixpkgs {
+    inherit system;
+    config.allowUnfree = true;
+  };
 in {
-  # we need to pass this to NixOS' HM module
-  _module.args = {inherit homeImports;};
+  _module.args = { inherit homeImports; };
 
   flake = {
     homeConfigurations = {
       "pkraus_athena" = homeManagerConfiguration {
-        modules = homeImports."pkraus@athena";
         inherit pkgs extraSpecialArgs;
+        modules = homeImports."pkraus@athena";
       };
 
       "pkraus_persephone" = homeManagerConfiguration {
-        modules = homeImports."pkras@persephone";
         inherit pkgs extraSpecialArgs;
+        modules = homeImports."pkraus@persephone";
+      };
+
+      "pkraus_iris" = homeManagerConfiguration {
+        inherit pkgs extraSpecialArgs;
+        modules = homeImports."pkraus@iris";
       };
     };
   };

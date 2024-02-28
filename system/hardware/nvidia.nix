@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  ...
+}: {
   services.xserver.videoDrivers = ["nvidia"];
 
   environment.variables = {
@@ -8,17 +11,21 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
-  environment.systemPackages = with pkgs; [
-    vulkan-loader
-    vulkan-validation-layers
-    vulkan-tools
-  ];
-
   hardware = {
     nvidia = {
-      open = true;
-      powerManagement.enable = true;
+      # driver - choose either stable, beta or production
+      open = true; # open-source driver currently in alpha, not recommended
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      
+      # modesetting is required
       modesetting.enable = true;
+      
+      powerManagement.enable = false;
+      # Experimental: can turn gpu off if not in use
+      powerManagement.finegrained = false;
+      
+      # enable nvidia-settings menue
+      nvidiaSettings = true;
     };
     opengl.extraPackages = with pkgs; [nvidia-vaapi-driver];
   };

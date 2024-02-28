@@ -6,7 +6,7 @@
   slurp,
   tesseract5,
   wl-clipboard,
-  langs ? "eng+hun+fra+jpn+jpn_vert+kor+kor_vert+pol+ron+spa",
+  langs ? "eng+de+hun+fra+jpn+jpn_vert+kor+kor_vert+pol+ron+spa",
 }: let
   _ = lib.getExe;
 in

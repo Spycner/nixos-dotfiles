@@ -1,10 +1,17 @@
 {
   imports = [
-    # editors
+    # host config
+    ../../../hosts/athena
+
+    # neovim config for editing
     ../../editors/neovim
+
+    # terminal emulator
+    ../../terminal/emulators/alacritty
 
     # programs
     ../../programs
+    ../../programs/games
     ../../programs/wayland
 
     # services
@@ -26,16 +33,5 @@
     # wayland-specific
     ../../services/wayland/hyprpaper.nix
     ../../services/wayland/hypridle.nix
-
-    # terminal emulators
-    ../../terminal/emulators/foot.nix
-    ../../terminal/emulators/wezterm.nix
   ];
-
-  wayland.windowManager.hyprland.settings = {
-    monitor = [
-        "DP-1,1920x1080@144,auto,auto"
-        "HDMI-A-1,1920x1080@60,auto,auto"
-    ];
-  };
 }

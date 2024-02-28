@@ -15,8 +15,6 @@
     file
     jaq
     ripgrep
-    wget
-    curl
   ];
 
   programs = {

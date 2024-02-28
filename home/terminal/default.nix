@@ -5,8 +5,6 @@
 in {
   imports = [
     ./programs
-    ./shell/starship.nix
-    ./shell/zsh.nix
   ];
 
   # add environment variables
