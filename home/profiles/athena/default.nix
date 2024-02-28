@@ -34,4 +34,9 @@
     ../../services/wayland/hyprpaper.nix
     ../../services/wayland/hypridle.nix
   ];
+
+  wayland.windowManager.hyprland.settings.monitor = [
+	"DP-1,1920x1080@144,auto,auto"
+	"HDMI-A-1,1920x1080@60,auto,auto"
+  ];
 }

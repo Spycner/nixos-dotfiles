@@ -30,7 +30,7 @@ in {
       [
         # compositor commands
         "$mod SHIFT, E, exec, pkill Hyprland"
-        "$mod, Q, killactive,"
+        "$mod, C, killactive,"
         "$mod, F, fullscreen,"
         "$mod, G, togglegroup,"
         "$mod SHIFT, N, changegroupactive, f"
@@ -45,7 +45,7 @@ in {
 
         # utility
         # terminal
-        "$mod, Return, exec, run-as-service alacritty"
+        "$mod, Q, exec, run-as-service alacritty"
         # logout menu
         "$mod, Escape, exec, wlogout -p layer-shell"
         # lock screen
@@ -70,21 +70,18 @@ in {
         "ALT, Print, exec, grimblast --notify --cursor copysave screen"
         "$mod SHIFT ALT, R, exec, grimblast --notify --cursor copysave screen"
 
-        # special workspace
-        "$mod SHIFT, grave, movetoworkspace, special"
-        "$mod, grave, togglespecialworkspace, eDP-1"
 
         # cycle workspaces
-        "$mod, bracketleft, workspace, m-1"
-        "$mod, bracketright, workspace, m+1"
+        "$mod, ., workspace, m-1"
+        "$mod, -, workspace, m+1"
 
         # cycle monitors
-        "$mod SHIFT, bracketleft, focusmonitor, l"
-        "$mod SHIFT, bracketright, focusmonitor, r"
+        "$mod SHIFT, ., focusmonitor, l"
+        "$mod SHIFT, -, focusmonitor, r"
 
         # send focused workspace to left/right monitors
-        "$mod SHIFT ALT, bracketleft, movecurrentworkspacetomonitor, l"
-        "$mod SHIFT ALT, bracketright, movecurrentworkspacetomonitor, r"
+        "$mod SHIFT ALT, ., movecurrentworkspacetomonitor, l"
+        "$mod SHIFT ALT, -, movecurrentworkspacetomonitor, r"
       ]
       ++ workspaces;
 
