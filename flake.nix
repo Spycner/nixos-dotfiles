@@ -61,7 +61,7 @@
         inputs.flake-parts.flakeModules.easyOverlay
         inputs.pre-commit-hooks.flakeModule
         inputs.treefmt-nix.flakeModule
-      ]
+      ];
 
       perSystem = {
         config,
@@ -93,6 +93,7 @@
               enable = true;
               indent_size = 4;
             };
+	  };
         };
 
         devenv.shells.dots = {
@@ -103,7 +104,7 @@
             git
             alejandra
             nodePackages.prettier
-          ]
+          ];
 
           languages.nix.enable = true;
           langagues.python.enable = true;
