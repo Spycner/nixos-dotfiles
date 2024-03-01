@@ -15,7 +15,7 @@
   hardware = {
     nvidia = {
       # driver - choose either stable, beta or production
-      open = true; # open-source driver currently in alpha, not recommended
+      # open = true; # open-source driver currently in alpha, not recommended
       package = config.boot.kernelPackages.nvidiaPackages.stable;
 
       # modesetting is required
