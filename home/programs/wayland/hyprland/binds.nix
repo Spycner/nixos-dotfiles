@@ -16,6 +16,7 @@ let
     10);
 in {
   wayland.windowManager.hyprland.settings = {
+    "$mod" = "SUPER";
     # mouse movements
     bindm = [
       "$mod, mouse:272, movewindow"

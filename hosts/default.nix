@@ -21,7 +21,7 @@
         desktop
         ++ [
           ./athena
-          "${mod}/core/lanzaboote.nix"
+          # "${mod}/core/lanzaboote.nix"
 
           "${mod}/hardware/nvidia.nix"
 
@@ -30,7 +30,7 @@
           "${mod}/programs/steam.nix"
 
           "${mod}/network/spotify.nix"
-          "${mod}/network/syncthing.nix"
+          #"${mod}/network/syncthing.nix"
 
           "${mod}/services/gnome-services.nix"
           "${mod}/services/location.nix"

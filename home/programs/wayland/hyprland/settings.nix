@@ -4,7 +4,6 @@
   pointer = config.home.pointerCursor;
 in {
   wayland.windowManager.hyprland.settings = {
-    "$mod" = "SUPER";
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
     ];
@@ -68,7 +67,7 @@ in {
     };
 
     input = {
-      kb_layout = "ro";
+      kb_layout = "de";
 
       # focus change on cursor move
       follow_mouse = 1;

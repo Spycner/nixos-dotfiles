@@ -26,6 +26,6 @@
     extraConfig.gpg.format = "ssh";
 
     userEmail = "pascal98kraus@gmail.com";
-    userName = "Pascal Kraus";
+    userName = "Spycner";
   };
 }

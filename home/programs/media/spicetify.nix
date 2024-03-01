@@ -25,8 +25,6 @@
     enabledExtensions = with spicePkgs.extensions; [
       fullAppDisplay
       history
-      genre
-      hidePodcasts
       shuffle
     ];
   };
