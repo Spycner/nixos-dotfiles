@@ -18,7 +18,7 @@ in {
 
     input-fields = [
       {
-        monitor = "eDP-1";
+        monitor = "";
 
         size = {
           width = 300;

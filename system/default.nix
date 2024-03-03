@@ -5,9 +5,7 @@ let
 
     ./hardware/opengl.nix
 
-    ./network/avahi.nix
     ./network/default.nix
-    ./network/tailscale.nix
 
     ./programs
 
@@ -16,13 +14,6 @@ let
     ./services/pipewire.nix
     ./hardware/bluetooth.nix
   ];
-
-  laptop =
-    desktop
-    ++ [
-      ./services/backlight.nix
-      ./services/power.nix
-    ];
 in {
-  inherit desktop laptop;
+  inherit desktop;
 }

@@ -14,15 +14,8 @@
 
     # laptop
     "pkraus@persephone" = [
-      ../.
-      ./persephone
     ];
 
-    # usb stick
-    "pkraus@iris" = [
-      ../base.nix
-      ./iris
-    ];
   };
 
   inherit (inputs.home-manager.lib) homeManagerConfiguration;
@@ -46,11 +39,6 @@ in {
       "pkraus_persephone" = homeManagerConfiguration {
         inherit pkgs extraSpecialArgs;
         modules = homeImports."pkraus@persephone";
-      };
-
-      "pkraus_iris" = homeManagerConfiguration {
-        inherit pkgs extraSpecialArgs;
-        modules = homeImports."pkraus@iris";
       };
     };
   };

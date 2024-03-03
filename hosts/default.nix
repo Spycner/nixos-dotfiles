@@ -21,20 +21,14 @@
         desktop
         ++ [
           ./athena
-          # "${mod}/core/lanzaboote.nix"
 
           "${mod}/hardware/nvidia.nix"
 
-          "${mod}/programs/gamemode.nix"
           "${mod}/programs/hyprland.nix"
-          "${mod}/programs/steam.nix"
 
           "${mod}/network/spotify.nix"
-          #"${mod}/network/syncthing.nix"
 
           "${mod}/services/gnome-services.nix"
-          "${mod}/services/location.nix"
-
           {
             home-manager = {
               users.pkraus.imports = homeImports."pkraus@athena";

@@ -18,19 +18,6 @@
 
     devenv.url = "github:cachix/devenv";
 
-    nix2container = {
-      url = "github:nlewo/nix2container";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    mk-shell-bin.url = "github:rrbutani/nix-mk-shell-bin";
-
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.home-manager.follows = "home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-index-db = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,24 +38,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nh = {
-      url = "github:viperML/nh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     yazi.url = "github:sxyazi/yazi";
-
-    lanzaboote.url = "github:nix-community/lanzaboote";
-
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-      inputs.flake-parts.follows = "flake-parts";
-    };
-
-    spicetify-nix = {
-      url = "github:the-argus/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     matugen = {
       url = "github:InioX/matugen/module";
@@ -84,18 +54,7 @@
 
     anyrun.url = "github:fufexan/anyrun";
 
-    ags = {
-      url = "github:Aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     chaotic.url = "https://flakehub.com/f/chaotic-cx/nyx/*.tar.gz";
-
-    gross = {
-      url = "github:fufexan/gross";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-    };
 
     hypridle = {
       url = "github:hyprwm/hypridle";
@@ -179,9 +138,8 @@
           ];
 
           languages.nix.enable = true;
-          languages.python.enable = true;
-
-          enterShell = ''
+          
+	  enterShell = ''
             dots devenv shell
           '';
         };
