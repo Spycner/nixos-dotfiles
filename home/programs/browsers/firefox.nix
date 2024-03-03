@@ -18,19 +18,13 @@
       };
       search.force = true;
 
-      extensions = with inputs.firefox-addons.pakcages.${pkgs.system}; [
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         firefox-color
         youtube-shorts-block
         ublock-origin
         darkreader
         sourcegraph
-        grammarly
-        tridactyl
       ];
     };
-    languagePacks = [
-      "de"
-      "en-US"
-    ];
   };
 }
