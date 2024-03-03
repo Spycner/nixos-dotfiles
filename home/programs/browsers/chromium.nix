@@ -1,13 +1,10 @@
 {
-  programs.chomium = {
+  programs.chromium = {
     enable = true;
-    extraOpts = {
-      "PasswordManagerEnabled" = false;
-      "SpellcheckEnabled" = true;
-      "SpellcheckLanguage" = [
-        "de"
-        "en-US"
-      ];
-    };
+    extensions = [
+      "hlgbcneanomplepojfcnclggenpcoldo"
+      "bkkmolkhemgaeaeggcmfbghljjjoofoh"
+      "jjhefcfhmnkfeepcpnilbbkaadhngkbi"
+    ];
   };
 }
