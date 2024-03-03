@@ -2,6 +2,7 @@
   imports = [
     # neovim config for editing
     ../../editors/neovim
+    ../../editors/vscode
 
     # terminal emulator
     ../../terminal/emulators/alacritty.nix
