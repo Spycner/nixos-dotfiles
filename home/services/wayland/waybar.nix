@@ -245,9 +245,9 @@ in
     # x y -> vertical, horizontal
     # x y z -> top, horizontal, bottom
     # w x y z -> top, right, bottom, left
-    style = let inherit (config.colorscheme) colors; in /* css */ ''
+    style = /* css */ ''
       * {
-        font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
+        font-family: "Inter", "JetBrains Mono", "Noto Color Emoji";
         font-size: 12pt;
         padding: 0;
         margin: 0 0.4em;
@@ -257,8 +257,8 @@ in
         padding: 0;
         opacity: 0.75;
         border-radius: 0.5em;
-        background-color: #${colors.base00};
-        color: #${colors.base05};
+        background-color: #24273a;
+        color: #cad3f5;
       }
       .modules-left,
       .modules-right {
@@ -266,43 +266,43 @@ in
       }
 
       #workspaces button {
-        background-color: #${colors.base00};
-        color: #${colors.base05};
+        background-color: #24273a;
+        color: #cad3f5;
         padding-left: 0.4em;
         padding-right: 0.4em;
         margin-top: 0.15em;
         margin-bottom: 0.15em;
       }
       #workspaces button.hidden {
-        background-color: #${colors.base00};
-        color: #${colors.base04};
+        background-color: #24273a;
+        color: #5b6078;
       }
       #workspaces button.focused,
       #workspaces button.active {
-        background-color: #${colors.base0A};
-        color: #${colors.base00};
+        background-color: #eed49f;
+        color: #24273a;
       }
       #workspaces button:hover {
-        background-color: #${colors.base03};
-        color: #${colors.base07};
+        background-color: #494d64;
+        color: #b7bdf8;
       }
 
       #clock {
-        background-color: #${colors.base01};
+        background-color: #1e2030;
         padding-right: 1em;
         padding-left: 1em;
         border-radius: 0.5em;
       }
 
       #custom-menu {
-        background-color: #${colors.base01};
+        background-color: #1e2030;
         padding-right: 1.5em;
         padding-left: 1em;
         margin-right: 0;
         border-radius: 0.5em;
       }
       #custom-hostname {
-        background-color: #${colors.base01};
+        background-color: #1e2030;
         padding-right: 1em;
         padding-left: 1em;
         margin-left: 0;
@@ -312,12 +312,13 @@ in
         padding-right: 0;
       }
       #tray {
-        color: #${colors.base05};
+        color: #cad3f5;
       }
       #custom-gpu, #cpu, #memory {
         margin-left: 0.05em;
         margin-right: 0.55em;
       }
     '';
+
   };
 }
