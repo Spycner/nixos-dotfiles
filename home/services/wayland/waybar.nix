@@ -73,7 +73,6 @@ in
           "clock"
           "pulseaudio"
           "battery"
-          "custom/gpg-agent"
         ];
 
         modules-right = [
@@ -98,7 +97,7 @@ in
         };
         "custom/gpu" = {
           interval = 5;
-          exec = "${cat} /sys/class/drm/card0/device/gpu_busy_percent";
+          exec = "${bat} /sys/class/drm/card0/device/gpu_busy_percent";
           format = "󰒋  {}%";
         };
         memory = {
@@ -153,32 +152,13 @@ in
           # Todo: change wofi to anyrun
           # on-click-left = "${wofi} -S drun -x 10 -y 10 -W 25% -H 60%";
           on-click-right = lib.concatStringsSep ";" (
-            (lib.optional hasHyprland "${hyprland}/bin/hyprctl dispatch togglespecialworkspace") ++
-            (lib.optional hasSway "${sway}/bin/swaymsg scratchpad show")
+            (lib.optional hasHyprland "${hyprland}/bin/hyprctl dispatch togglespecialworkspace")
           );
 
         };
         "custom/hostname" = {
           exec = "echo $USER@$HOSTNAME";
           on-click = "${systemctl} --user restart waybar";
-        };
-        "custom/gpg-agent" = {
-          interval = 2;
-          return-type = "json";
-          exec =
-            let gpgCmds = import ../../../cli/gpg-commands.nix { inherit pkgs; };
-            in
-            jsonOutput "gpg-agent" {
-              pre = ''status=$(${gpgCmds.isUnlocked} && echo "unlocked" || echo "locked")'';
-              alt = "$status";
-              tooltip = "GPG is $status";
-            };
-          format = "{icon}";
-          format-icons = {
-            "locked" = "";
-            "unlocked" = "";
-          };
-          on-click = "";
         };
         "custom/gammastep" = {
           interval = 5;
