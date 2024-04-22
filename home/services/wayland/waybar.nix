@@ -260,11 +260,9 @@ in
         background-color: #${colors.base00};
         color: #${colors.base05};
       }
-      .modules-left {
-        margin-left: -0.65em;
-      }
+      .modules-left,
       .modules-right {
-        margin-right: -0.65em;
+        margin: 0 0.5em;
       }
 
       #workspaces button {
@@ -283,6 +281,10 @@ in
       #workspaces button.active {
         background-color: #${colors.base0A};
         color: #${colors.base00};
+      }
+      #workspaces button:hover {
+        background-color: #${colors.base03};
+        color: #${colors.base07};
       }
 
       #clock {
