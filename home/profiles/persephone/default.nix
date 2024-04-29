@@ -19,15 +19,11 @@
     # system services
     ../../services/system/dunst.nix
     ../../services/system/polkit-agent.nix
+    ../../services/system/power-monitor.nix
 
     # wayland-specific
     ../../services/wayland/hyprpaper.nix
     ../../services/wayland/hypridle.nix
     # ../../services/wayland/waybar.nix
-  ];
-
-  wayland.windowManager.hyprland.settings.monitor = [
-    "DP-1,1920x1080@144,auto,auto"
-    "HDMI-A-1,1920x1080@60,auto,auto"
   ];
 }

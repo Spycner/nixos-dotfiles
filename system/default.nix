@@ -4,16 +4,25 @@ let
     ./core/default.nix
 
     ./hardware/opengl.nix
+    ./hardware/fwupd.nix
+    ./hardware/bluetooth.nix
+
 
     ./network/default.nix
+    ./network/avahi.nix
 
     ./programs
 
     ./services
     ./services/greetd.nix
     ./services/pipewire.nix
-    ./hardware/bluetooth.nix
   ];
+
+  laptop =
+    desktop
+    ++ [
+      ./services/power.nix
+    ];
 in {
-  inherit desktop;
+  inherit desktop laptop;
 }

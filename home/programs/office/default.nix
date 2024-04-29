@@ -7,5 +7,7 @@
     libreoffice
     obsidian
     xournalpp
+    betterbird
+    discord
   ];
 }
