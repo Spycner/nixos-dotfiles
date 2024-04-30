@@ -149,7 +149,7 @@
 
           languages.nix.enable = true;
           
-	  enterShell = ''
+	        enterShell = ''
             dots devenv shell
           '';
         };

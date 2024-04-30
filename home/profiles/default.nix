@@ -14,6 +14,8 @@
 
     # laptop
     "pkraus@persephone" = [
+      ../.
+      ./persephone
     ];
 
   };

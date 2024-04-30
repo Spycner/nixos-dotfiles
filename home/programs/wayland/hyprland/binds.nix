@@ -46,7 +46,7 @@ in {
 
         # utility
         # terminal
-        "$mod, Q, exec, run-as-service alacritty"
+        "$mod, Q, exec, run-as-service wezterm"
         # logout menu
         "$mod, Escape, exec, wlogout -p layer-shell"
         # lock screen

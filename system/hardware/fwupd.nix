@@ -1,0 +1,3 @@
+{
+  services.fwdup.enable = true;
+}
