@@ -16,6 +16,4 @@
     # DNS resolver
     resolved.enable = true;
   };
-
-  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 }
