@@ -1,3 +1,3 @@
 {
-  services.fwdup.enable = true;
+  services.fwupd.enable = true;
 }
