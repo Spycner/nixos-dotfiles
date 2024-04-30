@@ -1,4 +1,4 @@
-{
+{ pkgs }:{
   imports = [
     ./fonts.nix
     ./home-manager.nix
@@ -13,4 +13,12 @@
 
     seahorse.enable = true;
   };
+
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+  };
+
+  home.packages = [ pkgs.docker-compose ];
+
 }

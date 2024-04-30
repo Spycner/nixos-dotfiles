@@ -30,4 +30,7 @@
     };
     opengl.extraPackages = with pkgs; [nvidia-vaapi-driver];
   };
+
+  virtualisation.docker.enableNvidia = true;
+  systemd.enableUnifiedCgroupHierarchy = false;
 }
