@@ -44,7 +44,7 @@
       modules =
         laptop
         ++ [
-          "./persephone"
+          ./persephone
 
           "${mod}/programs/hyprland.nix"
 
