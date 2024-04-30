@@ -3,7 +3,6 @@
     ./fonts.nix
     ./home-manager.nix
     ./xdg.nix
-    ./docker.nix
   ];
 
   programs = {

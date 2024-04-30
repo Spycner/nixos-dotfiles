@@ -8,6 +8,7 @@
     ./themespec.nix
     ./terminal
     ./base.nix
+    ./development.nix
     inputs.matugen.nixosModules.default
     inputs.hyprlock.homeManagerModules.default
     inputs.hypridle.homeManagerModules.default
