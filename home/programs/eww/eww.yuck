@@ -111,7 +111,7 @@
 
 
 ;; ━━━ WIFI ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(defvar wifi "{}")
+;(defvar wifi "{}")
 (defpoll wifi :interval "30s" "./scripts/wifi.sh")
 
 (defwidget wifi []
@@ -125,7 +125,7 @@
 )
 
 ;; ━━━ BATTERY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(defvar battery "{}")
+;(defvar battery "{}")
 (defpoll battery :interval "60s" "./scripts/battery.sh")
 
 (defwidget battery []
