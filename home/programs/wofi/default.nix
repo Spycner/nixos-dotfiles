@@ -2,6 +2,12 @@
 {
   programs.wofi = {
     enable = true;
+    settings = {
+      term = "foot";
+      hide_scroll = true;
+      insensitive = true;
+      columns = 2;
+    };
     style = ''
       @define-color	rosewater  #f5e0dc;
       @define-color	rosewater-rgb  rgb(245, 224, 220);

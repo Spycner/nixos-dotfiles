@@ -33,6 +33,7 @@
             home-manager = {
               users.pkraus.imports = homeImports."pkraus@athena";
               extraSpecialArgs = specialArgs;
+              backupFileExtension = "bak";
             };
           }
 
