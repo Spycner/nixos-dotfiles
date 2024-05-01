@@ -2,7 +2,7 @@
 {
   programs.wofi = {
     enable = true;
-    style = "* {
+    style = ''* {
         all: unset;
         font-family: "JetBrainsMono";
         font-size: 16px;
@@ -36,6 +36,6 @@
       #entry:selected {
         background-color: #303241;
         color: #d9e0ee;
-      }";
+      }'';
   };
 }
