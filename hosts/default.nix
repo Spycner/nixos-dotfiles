@@ -55,6 +55,7 @@
             home-manager = {
               users.pkraus.imports = homeImports."pkraus@persephone";
               extraSpecialArgs = specialArgs;
+              backupFileExtension = "bak";
             };
           }
 

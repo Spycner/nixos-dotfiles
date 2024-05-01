@@ -87,7 +87,7 @@ in {
 
     bindr = [
       # launcher
-      "$mod, SUPER_L, exec, pkill .anyrun-wrapped || run-as-service anyrun"
+      "$mod, SUPER_L, exec, pgrep -x wofi >/dev/null 2>&1 && killall wofi || wofi --dmenu --show drun"
     ];
 
     bindl = [

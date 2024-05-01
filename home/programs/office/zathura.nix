@@ -33,10 +33,11 @@
   xdg.configFile = {
     "zathura/catppuccin-latte".source = pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/catppuccin/zathura/main/src/catppuccin-latte";
-      hash = "sha256-KuJ4KG5vWP8v4J4eUQfW++XAriSVh15t0rwz9/xPZbk=";
+      hash = "sha256-h1USn+8HvCJuVlpeVQyzSniv56R/QgWyhhRjNm9bCfY=";
     };
     "zathura/catppuccin-mocha".source = pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/catppuccin/zathura/main/src/catppuccin-mocha";
-      hash = "sha256-QZypNMfVlTzMRaQ286DDWL9dAvQZ8INkllzo8t0aHf4=";
+      hash = "sha256-POxMpm77Pd0qywy/jYzZBXF/uAKHSQ0hwtXD4wl8S2Q=";
+    };
   };
 }

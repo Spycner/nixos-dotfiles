@@ -29,7 +29,7 @@
       import = [
         (pkgs.fetchurl {
           url = "https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.toml";
-          hash = "sha256-nmVaYJUavF0u3P0Qj9rL+pzcI9YQOTGPyTvi+zNVPhg=";
+          hash = "sha256-/N3rwIZ0SJBiE7TiBs4pEjhzM1f2hr26WXM3ifUzzOY=";
         })
       ];
     };
