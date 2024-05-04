@@ -22,6 +22,7 @@ let
     desktop
     ++ [
       ./services/power.nix
+      ./hardware/displaylink.nix
     ];
 in {
   inherit desktop laptop;
