@@ -11,7 +11,7 @@
     ./development.nix
     inputs.matugen.nixosModules.default
     inputs.hyprlock.homeManagerModules.default
-    inputs.hypridle.homeManagerModules.default
+#    inputs.hypridle.homeManagerModules.default
     self.nixosModules.theme
   ];
 

@@ -12,9 +12,9 @@
   };
 
   manual = {
-    html.enable = false;
-    json.enable = false;
-    manpages.enable = false;
+    html.enable = true;
+    json.enable = true;
+    manpages.enable = true;
   };
   programs.home-manager.enable = true;
 }
