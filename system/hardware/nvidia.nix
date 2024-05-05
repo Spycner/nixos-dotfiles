@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  services.xserver.videoDrivers = ["nvidia" "modesetting"];
+  services.xserver.videoDrivers = ["nvidia"];
 
   environment.variables = {
     GBM_BACKEND = "nvidia-drm";
