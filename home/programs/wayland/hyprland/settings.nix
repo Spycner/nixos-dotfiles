@@ -16,10 +16,10 @@ in {
     ];
 
     general = {
-      gaps_in = 5;
-      gaps_out = 5;
-      border_size = 2;
-      "col.active_border" = "rgba(0x94e2d5ff)";
+      gaps_in = 2;
+      gaps_out = 2;
+      border_size = 3;
+      "col.active_border" = "rgba(88888888)";
       "col.inactive_border" = "rgba(00000088)";
 
       allow_tearing = true;

@@ -266,15 +266,6 @@ in
       background-color: #575268;
       }
       
-      /* Clock, Custom Menu, Hostname */
-      #clock,
-      #custom-menu,
-      #custom-hostname {
-      background-color: #434257;
-      padding: 0 1em;
-      border-radius: 0.5em;
-      }
-      
       #custom-menu {
       padding-right: 1.5em;
       margin-right: 0;
@@ -292,20 +283,6 @@ in
       /* Tray */
       #tray {
       color: #cdd6f4;
-      }
-      
-      /* GPU, CPU, Memory */
-      #custom-gpu,
-      #cpu,
-      #memory {
-      margin: 0 0.5em 0 0.05em;
-      }
-
-      #cpu,
-      #custom-gpu, 
-      #memory,
-      #clock {
-        color: #cba6f7;
       }
     '';
   };
