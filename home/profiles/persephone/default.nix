@@ -24,6 +24,6 @@
     # wayland-specific
     ../../services/wayland/hyprpaper.nix
     ../../services/wayland/hypridle.nix
-    # ../../services/wayland/waybar.nix
+    ../../services/wayland/waybar.nix
   ];
 }
