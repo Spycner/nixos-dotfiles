@@ -18,8 +18,8 @@ in {
     general = {
       gaps_in = 5;
       gaps_out = 5;
-      border_size = 1;
-      "col.active_border" = "rgba(88888888)";
+      border_size = 2;
+      "col.active_border" = "rgba(0x94e2d5ff)";
       "col.inactive_border" = "rgba(00000088)";
 
       allow_tearing = true;
@@ -107,14 +107,4 @@ in {
 
     debug.disable_logs = false;
   };
-
-  wayland.windowManager.hyprland.extraConfig = ''
-    plugin {
-      csgo-vulkan-fix {
-        res_w = 1280
-        res_h = 800
-        class = cs2
-      }
-    }
-  '';
 }

@@ -264,7 +264,6 @@ in
       
       #workspaces button:hover {
       background-color: #575268;
-      color: #cba6f7;
       }
       
       /* Clock, Custom Menu, Hostname */
