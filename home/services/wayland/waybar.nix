@@ -197,33 +197,34 @@ in
 
     style = ''
       /* Catppuccin Mocha Color Palette */
-      --rosewater: #f8bd96;
-      --flamingo: #f2cdcd;
-      --pink: #f5c2e7;
-      --mauve: #cba6f7;
-      --red: #f38ba8;
-      --maroon: #eba0ac;
-      --peach: #fab387;
-      --yellow: #f9e2af;
-      --green: #a6e3a1;
-      --teal: #94e2d5;
-      --blue: #89dceb;
-      --sky: #74c7ec;
-      --sapphire: #89b4fa;
-      --lavender: #b4befe;
-      --text: #cdd6f4;
-      --subtext1: #bac2de;
-      --subtext0: #a6adc8;
-      --overlay: #938aa2;
-      --surface: #6e6c7e;
-      --base: #575268;
-      --mantle: #434257;
-      --crust: #313244;
+      /* @define-color rosewater: #f8bd96;
+      @define-color flamingo: #f2cdcd;
+      @define-color pink: #f5c2e7;
+      @define-color mauve: #cba6f7;
+      @define-color red: #f38ba8;
+      @define-color maroon: #eba0ac;
+      @define-color peach: #fab387;
+      @define-color yellow: #f9e2af;
+      @define-color green: #a6e3a1;
+      @define-color teal: #94e2d5;
+      @define-color blue: #89dceb;
+      @define-color sky: #74c7ec;
+      @define-color sapphire: #89b4fa;
+      @define-color lavender: #b4befe;
+      @define-color text: #cdd6f4;
+      @define-color subtext1: #bac2de;
+      @define-color subtext0: #a6adc8;
+      @define-color overlay: #938aa2;
+      @define-color surface: #6e6c7e;
+      @define-color base: #575268;
+      @define-color mantle: #434257;
+      @define-color crust: #313244; */
       
       /* General Styling */
       * {
-      font-family: "Inter", "JetBrains Mono", "Noto Color Emoji";
+      font-family: "Inter", "JetBrains Mono", "Noto Color Emoji", monospace;
       font-size: 12pt;
+      font-weight: bold;
       padding: 0;
       margin: 0 0.4em;
       }
@@ -233,8 +234,8 @@ in
       padding: 0;
       opacity: 0.75;
       border-radius: 0.5em;
-      background-color: var(--crust);
-      color: var(--text);
+      background-color: #313244;
+      color: #cdd6f4;
       }
       
       /* Module Containers */
@@ -245,32 +246,32 @@ in
       
       /* Workspaces */
       #workspaces button {
-      background-color: var(--crust);
-      color: var(--text);
+      background-color: #313244;
+      color: #cdd6f4;
       padding: 0.15em 0.4em;
       }
       
       #workspaces button.hidden {
-      background-color: var(--crust);
-      color: var(--subtext0);
+      background-color: #313244;
+      color: #cdd6f4;
       }
       
       #workspaces button.focused,
       #workspaces button.active {
-      background-color: var(--yellow);
-      color: var(--crust);
+      background-color: #89b4fa;
+      color: #313244;
       }
       
       #workspaces button:hover {
-      background-color: var(--base);
-      color: var(--mauve);
+      background-color: #575268;
+      color: #cba6f7;
       }
       
       /* Clock, Custom Menu, Hostname */
       #clock,
       #custom-menu,
       #custom-hostname {
-      background-color: var(--mantle);
+      background-color: #434257;
       padding: 0 1em;
       border-radius: 0.5em;
       }
@@ -291,7 +292,7 @@ in
       
       /* Tray */
       #tray {
-      color: var(--text);
+      color: #cdd6f4;
       }
       
       /* GPU, CPU, Memory */
@@ -300,81 +301,13 @@ in
       #memory {
       margin: 0 0.5em 0 0.05em;
       }
-    '';
-#    style = ''
-#      * {
-#        font-family: "Inter", "JetBrains Mono", "Noto Color Emoji";
-#        font-size: 12pt;
-#        padding: 0;
-#        margin: 0 0.4em;
-#      }
-#
-#      window#waybar {
-#        padding: 0;
-#        opacity: 0.75;
-#        border-radius: 0.5em;
-#        background-color: #24273a;
-#        color: #cad3f5;
-#      }
-#      .modules-left,
-#      .modules-right {
-#        margin: 0 0.5em;
-#      }
-#
-#      #workspaces button {
-#        background-color: #24273a;
-#        color: #cad3f5;
-#        padding-left: 0.4em;
-#        padding-right: 0.4em;
-#        margin-top: 0.15em;
-#        margin-bottom: 0.15em;
-#      }
-#      #workspaces button.hidden {
-#        background-color: #24273a;
-#        color: #5b6078;
-#      }
-#      #workspaces button.focused,
-#      #workspaces button.active {
-#        background-color: #eed49f;
-#        color: #24273a;
-#      }
-#      #workspaces button:hover {
-#        background-color: #494d64;
-#        color: #b7bdf8;
-#      }
-#
-#      #clock {
-#        background-color: #1e2030;
-#        padding-right: 1em;
-#        padding-left: 1em;
-#        border-radius: 0.5em;
-#      }
-#
-#      #custom-menu {
-#        background-color: #1e2030;
-#        padding-right: 1.5em;
-#        padding-left: 1em;
-#        margin-right: 0;
-#        border-radius: 0.5em;
-#      }
-#      #custom-hostname {
-#        background-color: #1e2030;
-#        padding-right: 1em;
-#        padding-left: 1em;
-#        margin-left: 0;
-#        border-radius: 0.5em;
-#      }
-#      #custom-currentplayer {
-#        padding-right: 0;
-#      }
-#      #tray {
-#        color: #cad3f5;
-#      }
-#      #custom-gpu, #cpu, #memory {
-#        margin-left: 0.05em;
-#        margin-right: 0.55em;
-#      }
-#    '';
 
+      #cpu,
+      #custom-gpu, 
+      #memory,
+      #clock {
+        color: #cba6f7;
+      }
+    '';
   };
 }
