@@ -22,7 +22,7 @@
 
     # wayland-specific
     ../../services/wayland/hyprpaper.nix
-    # ../../services/wayland/waybar.nix
+    ../../services/wayland/waybar.nix
   ];
 
   wayland.windowManager.hyprland.settings.monitor = [
