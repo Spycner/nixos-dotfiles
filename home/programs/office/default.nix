@@ -10,5 +10,8 @@
     xournalpp
     betterbird
     discord
+    onedrive
+    onedrivegui
+    zoomus
   ];
 }
