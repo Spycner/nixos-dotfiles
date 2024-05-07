@@ -12,6 +12,7 @@
       "video"
       "wheel"
       "docker"
+      "scanner"
     ];
   };
 }

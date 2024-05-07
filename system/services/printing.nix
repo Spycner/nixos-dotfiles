@@ -12,6 +12,11 @@
     defaultShared = true;
   };
 
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.hplipWithPlugin ];
+  };
+
 #  hardware.printers = {
 #    ensurePrinters = [
 #      {
