@@ -13,6 +13,7 @@
       "wheel"
       "docker"
       "scanner"
+      "lp"
     ];
   };
 }
