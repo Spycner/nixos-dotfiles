@@ -12,6 +12,9 @@
     kdeconnect.enable = true;
 
     seahorse.enable = true;
+    
+    # enable dynamically linked binaries for python etc.
+    nix-ld.enable = true;
   };
   
   virtualisation.docker = {
