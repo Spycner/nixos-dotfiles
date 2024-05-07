@@ -29,6 +29,7 @@
           "${mod}/network/spotify.nix"
 
           "${mod}/services/gnome-services.nix"
+          "${mod}/services/printing.nix"
           {
             home-manager = {
               users.pkraus.imports = homeImports."pkraus@athena";
@@ -52,6 +53,7 @@
           "${mod}/network/spotify.nix"
 
           "${mod}/services/gnome-services.nix"
+          "${mod}/services/printing.nix"
           {
             home-manager = {
               users.pkraus.imports = homeImports."pkraus@persephone";
