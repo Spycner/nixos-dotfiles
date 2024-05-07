@@ -16,6 +16,7 @@ let
     ./services
     ./services/greetd.nix
     ./services/pipewire.nix
+    ./services/printing.nix
   ];
 
   laptop =
