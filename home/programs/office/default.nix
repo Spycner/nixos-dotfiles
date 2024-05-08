@@ -11,6 +11,6 @@
     discord
     onedrive
     onedrivegui
-    zoomus
+    zoom-us
   ];
 }
