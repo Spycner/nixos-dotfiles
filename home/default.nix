@@ -9,6 +9,7 @@
     ./terminal
     ./base.nix
     ./development.nix
+    ./services/system/wireguard.nix
     inputs.matugen.nixosModules.default
     inputs.hyprlock.homeManagerModules.default
 #    inputs.hypridle.homeManagerModules.default
