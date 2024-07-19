@@ -1,27 +1,30 @@
 {
-  description = "My NixOS configurations";
+  description = "My NixOS for Desktop and Laptop";
 
   inputs = {
+    # source for nixpackages, could be a version, but I prefer the latest packages
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # necesary packages for flakes
     flake-utils.url = "github:numtide/flake-utils";
-
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
+    # home-manager package
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    devenv.url = "github:cachix/devenv";
-
+    # index db for nixpackages
     nix-index-db = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #@HERE: continue
 
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
@@ -86,7 +89,7 @@
 
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      # What systems to build for
+      # What systems to build for, I currently only own 64bit systems
       systems = ["x86_64-linux"];
 
       # modular flakes to import
@@ -96,10 +99,11 @@
         ./lib
         ./modules
         ./pkgs
-        inputs.devenv.flakeModule
-        inputs.flake-parts.flakeModules.easyOverlay
+
+        ### Extra Stuff
+        inputs.flake-parts.flakeModules.easyOverlay # Provides 'perSystem' functionality
         inputs.pre-commit-hooks.flakeModule
-        inputs.treefmt-nix.flakeModule
+        inputs.treefmt-nix.flakeModule # formatter for the whole project tree
       ];
 
       perSystem = {
@@ -115,10 +119,6 @@
 
           settings.hooks = {
             alejandra.enable = true;
-            prettier = {
-              enable = true;
-              excludes = [".js" ".md" ".ts" ".css" ".scss"];
-            };
           };
         };
 
@@ -127,7 +127,6 @@
 
           programs = {
             alejandra.enable = true;
-            ruff.enable = true;
             deadnix.enable = true;
             shellcheck.enable = true;
             shfmt = {
@@ -135,23 +134,6 @@
               indent_size = 4;
             };
           };
-        };
-
-        devenv.shells.dots = {
-          packages = with pkgs; [
-            inputs'.agenix.packages.default
-            inputs'.catppuccinifier.packages.cli
-            config.treefmt.build.wrapper
-            git
-            alejandra
-            nodePackages.prettier
-          ];
-
-          languages.nix.enable = true;
-          
-	        enterShell = ''
-            dots devenv shell
-          '';
         };
       };
     };
