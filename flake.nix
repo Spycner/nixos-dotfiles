@@ -24,47 +24,47 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #@HERE: continue
+    # source for bleeding-edge packages
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
+    # See hooks and formatting at the end of file
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Tool to cast any wallpaper to catppuccin theme
     catppuccinifier = {
       url = "github:lighttigerXIV/catppuccinifier";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Super cool cli fs explorer
     yazi.url = "github:sxyazi/yazi";
 
+    # Color palette generator from color or image
     matugen = {
       url = "github:InioX/matugen/module";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ### Hyprland (wm) stuff ###
+    # wallpaper util
     hyprpaper.url = "github:hyprwm/hyprpaper";
-
     hyprlock = {
       url = "github:hyprwm/hyprlock";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    anyrun.url = "github:fufexan/anyrun";
-
-    chaotic.url = "https://flakehub.com/f/chaotic-cx/nyx/*.tar.gz";
-
     hypridle = {
       url = "github:hyprwm/hypridle";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland/fe7b748eb668136dd0558b7c8279bfcd7ab4d759";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
@@ -85,6 +85,12 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # app launcher / runner
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
   };
 
   outputs = inputs @ {flake-parts, ...}:
@@ -94,11 +100,11 @@
 
       # modular flakes to import
       imports = [
-        ./home/profiles
-        ./hosts
-        ./lib
-        ./modules
-        ./pkgs
+        ./home/profiles # home manager configs
+        ./hosts # specification of hardware etc for each system
+        # ./lib
+        # ./modules
+        # ./pkgs
 
         ### Extra Stuff
         inputs.flake-parts.flakeModules.easyOverlay # Provides 'perSystem' functionality
